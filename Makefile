@@ -1,7 +1,8 @@
 PREFIX = /usr/local
+CFLAGS = -Wall -Wextra -Werror -pedantic -O2 -fPIC -mmacosx-version-min=10.8
 
 aclinherit: aclinherit.c
-	$(CC) -o aclinherit aclinherit.c
+	$(CC) $(CFLAGS) -o aclinherit aclinherit.c
 
 .PHONY: install
 install: aclinherit
